@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+  background-color: #D5D2CD;
+  padding: 5px;
+}
+
+header > img {
+  width: 150px;
+  height: 100px;
+}
+
+header > nav > a {
+  text-decoration: none;
+  color: #1E2019;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+header > nav > a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+main {
+  background-color: #1E2019;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+main > h1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+form {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #D3D0CB;
+  border-radius: 10px;
+}
+
+form > p,
+form > div > p {
+  padding-top: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="checkbox"],
+textarea {
+  accent-color: #E2C044;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #587B7F;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+form > div {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+input[type="submit"] {
+  background-color: #E2C044;
+  width: 70px;
+  height: 25px;
+  margin-bottom: 15px;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+form a,
+main {
+  color: #D3D0CB;
+}
+
+form a:hover {
+  outline: solid 1px #D3D0CB;
+}
+
+form a:hover,
+input[type="submit"] {
+  border-radius: 5px;
+}
+
