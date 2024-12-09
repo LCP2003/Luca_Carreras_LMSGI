@@ -1,0 +1,90 @@
+/*Eliminamos estilos por defecto.*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--negro);
+}
+
+/*Creamos variables para los colores.*/
+:root {
+  --morado: #6d597a;
+  --rosa: #b56576;
+  --naranja: #eaac6b;
+  --blanco: #fff;
+  --negro: #000;
+}
+
+/*Añadimos estilo deseado.*/
+header,
+footer,
+main,
+section,
+aside,
+.card {
+  display: flex;
+}
+
+header,
+footer {
+  background-color: var(--morado);
+  color: var(--blanco);
+  height: 55px;
+}
+
+header,
+footer,
+section,
+.card {
+  justify-content: center;
+}
+
+header,
+footer,
+.card {
+  align-items: center;
+}
+
+aside {
+  padding: 10px;
+  flex-flow: column;
+  gap: 10px;
+  background-color: var(--rosa);
+  width: 20%;
+}
+
+section {
+  padding: 20px;
+  background-color: var(--blanco);
+  height: 500px;
+  width: 100%;
+  flex-flow: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  background-color: var(--naranja);
+  height: 100px;
+  width: 40%; 
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.card:first-child,
+.card:nth-child(2) {
+  align-self: flex-end;
+}
+.card:last-child,
+.card:nth-child(3) {
+  align-self: flex-start;
+}
+
