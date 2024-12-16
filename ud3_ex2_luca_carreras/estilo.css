@@ -1,0 +1,163 @@
+:root {
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
+
+@font-face {
+  font-family: Epilogue;
+  src: url(fonts/Epilogue/Epilogue-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Epilogue, sans-serif;
+}
+
+body {
+  background-color: var(--almost-white);
+  color: var(--almost-black);
+  width: 100%;
+}
+
+ul li {
+  list-style: none;
+}
+
+header,
+header > div,
+main,
+main > section > div,
+main > section {
+  display: flex;
+}
+
+header {
+  justify-content: space-around;
+  width: 100%;
+  padding: 5px;
+}
+
+#nav-menu {
+  display: none;
+}
+
+main,
+section {
+  width: 100%;
+  flex-flow: column;
+}
+
+main > picture img {
+  width: 100%;
+}
+
+main > section {
+  text-align: center;
+  gap: 25px;
+  padding: 20px;
+  align-items: center;
+}
+
+main > section h2 {
+  font-size: 2em;
+}
+
+main > section p {
+  color: var(--medium-gray);
+}
+
+.btn-learn {
+  width: 130px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 15px;
+  color: var(--almost-white);
+  background-color: var(--almost-black);
+  font-weight: bold;
+}
+
+main > section > div {
+  margin-top: 10px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+main > section > div img {
+  height: 20px;
+}
+
+@media (min-width: 1000px) {
+
+main > section,
+main > section h2 {
+  text-align: left;
+}
+    
+main {
+  flex-flow: row-reverse;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  padding: 80px 50px 0 50px;
+}
+
+main > picture img {
+  width: 500px;
+}
+
+main > section {
+  align-items: start;
+  width: 50%;
+}
+
+main > section h2 {
+  font-size: 4.8em;
+}
+
+main > section p {
+  font-size: 1.2em;
+  padding: 50px 50px 0 0;
+}
+
+.btn-learn {
+  margin-bottom: 50px;
+}
+
+main > section div {
+  justify-content: start;
+}
+
+main > section div img {
+  padding-right: 20px;
+}
+
+#btn-menu {
+  display: none;
+}
+
+header {
+  display: block;
+}
+
+.ul-submenu li {
+  display: none;
+}
+
+#nav-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+header {
+  height: 50px;
+  flex-direction: row;
+  display: flex;
+}
+
+.ul-submenu {
+  display: none;
+}
+
+}
