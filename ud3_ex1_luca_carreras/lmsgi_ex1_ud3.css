@@ -65,26 +65,18 @@ section {
   padding: 20px;
   background-color: var(--blanco);
   height: 500px;
-  width: 100%;
+  width: 80%;
   flex-flow: row;
   flex-wrap: wrap;
   gap: 10px;
+  align-content: center;
 }
 
 .card {
   background-color: var(--naranja);
   height: 100px;
-  width: 40%; 
+  flex-basis: 40%; 
   flex-grow: 1;
   flex-shrink: 1;
-}
-
-.card:first-child,
-.card:nth-child(2) {
-  align-self: flex-end;
-}
-.card:last-child,
-.card:nth-child(3) {
-  align-self: flex-start;
 }
 

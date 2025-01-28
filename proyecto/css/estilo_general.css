@@ -1,0 +1,424 @@
+/*Importación de las fuentes*/
+ @font-face {
+    font-family: "RomanSD";
+    src: url("../recursos/fuentes/Roman SD.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "LucidaSans";
+    src: url("../recursos/fuentes/LSANS.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/*Variables para los colores*/
+  :root {
+    --negro: #080502;
+    --blanco: #FFF7ED;
+    --marron1: #E2C08C;
+    --marron2: #825B24;
+    --dorado: #EFB810;
+  }
+
+/*Documento CSS para el estilo común para todo el documento, mayormente la cabecera
+y el pie de página.*/
+
+/*Eliminamos los márgenes existentes del navegador por defecto, asignamos la fuente general
+de toda la página y su color.*/
+* {
+    margin: 0;
+    font-family:  'LucidaSans', sans-serif;
+    color: var(--negro);
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+}
+
+::selection {
+	background: var(--dorado);
+    color: var(--marron2);
+}
+
+/*Asignamos el estílo de letra específico al nombre de la página, tanto en la
+cabecera como en el pie de página.*/
+h1, h4 {
+    font-family: 'RomanSD';
+}
+
+/*Ocultamos por defecto el logo en versión grande, los textos de los botones de
+navegación, las imagenes en modo hover, el texto del botón de like, las líneas
+horizontales divisorias entre redes sociales y sus textos.
+Todo ello tendrá su uso en las versiones para tabletas o PC, pero no se utilizan en
+la versión móvil.*/
+.logo_pc,
+header nav p,
+.hover_image,
+.clicked_image,
+article div:first-child p,
+.link_redes div p,
+.redes_sociales > p,
+form {
+    display: none;
+}
+
+/*Hacer visible el menú con JS*/
+.nav-visible {
+    display: block;
+}
+
+/*Eliminamos el subrallado y el color por defecto de los
+enlaces.*/
+a {
+    text-decoration: none;
+}
+
+/*Colocamos el menú de filtros*/
+footer,
+form {
+    background-color: var(--marron1);
+}
+
+form {
+    width: 100%;
+    left: 0;
+    margin-top: 70px;
+    border-bottom: solid 1px var(--negro);
+    padding: 10px;
+    text-align: center;
+}
+
+form p:not(.form_botones) {
+    padding: 5px 10px;
+}
+
+form p.form_botones {
+    padding-top: 20px;
+}
+
+.form_botones {
+    padding: 5px;
+}
+
+.form_botones *,
+select {
+    border-radius: 8px;
+    border: solid 2px var(--negro);
+}
+
+.form_botones *,
+input[type="checkbox"] {
+    accent-color: var(--dorado);
+}
+
+input:hover,
+button:hover {
+    background-color: var(--dorado);
+}
+
+select:hover {
+    outline: solid 1px var(--negro);
+}
+
+/*Aplicamos posición absoluta a los elementos que la rquieren.*/
+header > nav,
+form,
+.logo_pc,
+.logo_movil {
+    position: absolute;
+}
+
+/*Añadimos el estilo de la cabecera y sus subpartes.*/
+header {
+    position: fixed;
+    width: 100vw;
+	height: 70px;
+    z-index: 1000;
+}
+
+header,
+header > nav,
+select,
+input,
+button {
+    background-color: var(--blanco);
+}
+
+header > nav {
+    margin-top: 16px;
+    right: 0;
+    padding-right: 20px;
+}
+
+header > nav,
+footer > div > p,
+.sub_footer > div > ul li,
+.logo_pc,
+.logo_movil {
+    padding-top: 10px;
+}
+
+header > nav > a > div,
+h1,
+.link_redes,
+.form_botones,
+form p:not(.form_botones) {
+    display: inline-block;
+}
+
+header > nav > a > div,
+header {
+	padding-left: 5px;
+}
+
+header .hover_image,
+header .no_hover_image {
+    width: 18px;
+    height: 18px;
+}
+
+.logo_pc,
+.logo_movil {
+    width: 80px;
+    height: auto;
+}
+
+h1 {
+    position: inherit;
+    padding-left: 95px;
+    font-size: 1.2em;
+    padding-top: 25px;
+}
+
+/*Añadimos el estilo de los enlaces a redes sociales.*/
+
+.redes_sociales {   
+    width: 200px;
+    text-align: center;
+    border-top: solid 1px var(--negro);
+}
+
+.redes_sociales div {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.link_redes > div {
+    width: 25px;
+    height: 25px;
+}
+
+footer .hover_image,
+footer .no_hover_image {
+    width: 22px;
+    height: 22px;
+}
+
+footer {
+    display: table;
+    padding: 20px 25px 0 25px;
+    height: 300px;
+    width: 100vw;
+}
+
+footer > div {
+    display: table-cell;
+    width: 100%;
+}
+
+.link_redes {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sub_footer > div > ul,
+ul li {
+    list-style: none;
+    text-align: right;
+}
+
+.link_redes > div:hover,
+header nav div:hover,
+main article div:hover {
+    .no_hover_image { 
+        display: none;
+    }
+    .hover_image {
+        display: inline-block;
+    }
+}
+
+footer > div > h4,
+.sub_footer > div > ul {
+    padding-bottom: 10px;
+}
+
+/*Añadimos el estilo del main y sus subpartes. Solo de la
+parte común a todos los views. Las partes específicas de la página
+principal se definen en un documento css aparte.*/
+main {
+    background-color: var(--negro);
+    padding-top: 80px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/*Modificamos algunas propiedades para adaptarlas a las medidas de
+una tableta.*/
+@media(min-width: 577px) and (max-width: 1024px) {  
+    .logo_pc {
+        display: inherit;
+        width: 100px;
+        height: auto;
+        padding-top: 5px;
+    }
+
+    .logo_movil {
+        display: none;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        padding-left: 110px;
+    }
+
+    footer {
+        height: 375px;
+    }
+
+    .link_redes > div {
+        width: 30px;
+        height: 30px;
+    }
+
+    header .hover_image,
+    header .no_hover_image {
+    width: 24px;
+    height: 24px;
+}
+    
+    footer .hover_image,
+    footer .no_hover_image {
+        width: 28px;
+        height: 28px;
+    }
+
+    .redes_sociales {
+        margin: 10px;
+        width: 210px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    ul,
+    ul li,
+    footer > div:first-child p {
+        font-size: 18px;
+    }
+    
+}
+
+@media (min-width: 1024px) {
+    .logo_pc {
+        width: 110px;
+        height: auto;
+        padding-top: 2px;
+    }
+
+    .logo_pc,
+    header nav p,
+    .redes_sociales > p {
+        display: inherit;
+    }
+    
+    .logo_movil {
+        display: none;
+    }
+
+    h1 {
+        font-size: 1.6em;
+        padding-left: 120px;
+    }
+
+    header nav {
+        padding-top: 0px;
+    }
+
+    header nav div {
+        background-color: var(--blanco);
+        border: solid 1px var(--marron2);
+        border-radius: 3px;
+        width: fit-content;
+        padding: 5px 8px;
+    }
+
+    header .hover_image,
+    header .no_hover_image {
+        width: 25px;
+        height: 25px;
+    }
+
+    header .hover_image,
+    header .no_hover_image,
+    header nav p {
+        vertical-align: middle;
+    }
+
+    header nav div:hover {
+        background-color: var(--marron2);
+        border-color: var(--negro);
+        p {
+            color: var(--dorado);
+        }
+    }
+
+    .link_redes {
+        display: block
+    }
+
+    .sub_footer {
+        position: absolute;
+        right: 0;
+        padding-right: 20px;
+    }
+
+    .redes_sociales {
+        border: none;
+        position: inherit;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    .redes_sociales div {
+        margin: 0;
+        padding: 8px 8px 5px 8px;
+    }
+
+    .link_redes div,
+    .link_redes div p {
+        display: inline-block;
+    }
+
+    .link_redes div {
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        border-top: 1px solid var(--negro);
+    }
+
+    .link_redes div p {
+        position: absolute;
+        padding-left: 10px;
+        padding-top: 2px;
+    }
+
+}

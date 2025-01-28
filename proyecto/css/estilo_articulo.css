@@ -1,0 +1,290 @@
+main {
+  background-image: url(../recursos/fondos/fondo_roma_movil.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+  padding: 85px 25px 35px 25px;
+}
+
+main *{
+  color: #FFF7ED;
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+.cabecera_articulo {
+  width: 100%;
+}
+
+.cabecera_articulo > img {
+  padding-top: 10px;
+}
+
+.cabecera_articulo > img,
+.cabecera_articulo > section {
+  width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+}
+
+.cabecera_articulo {
+  border-top: solid 1px #FFF7ED;
+  border-bottom: solid 1px #FFF7ED;
+}
+
+/*Configuración de la seción de la cabecera_articulo.*/
+
+.cabecera_articulo > section,
+.enlace_contacto {
+  display: flex;
+}
+
+.cabecera_articulo > section {
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center;
+  font-size: 0.7em;
+}
+
+.enlace_contacto {
+  width: 50%;
+  align-items: center;
+  justify-content: left;
+}
+
+.enlace_contacto p {
+  padding-left: 5%;
+}
+
+.cabecera_articulo > section img {
+  width: 15%;
+  border-radius: 50px;
+}
+
+.cabecera_articulo >section:hover {
+  img {
+    outline: #EFB810 solid 3px;
+  }
+}
+
+/*Configuración del cuerpo del artículo*/
+
+h5, h3 {
+  font-size: 1.6em;
+}
+
+h5,
+.cuerpo_articulo p,
+.cuerpo_articulo section,
+aside,
+.redes_sociales_autor {
+  padding-top: 15px;
+}
+
+.cuerpo_articulo p {
+  font-size: 0.8em;
+}
+
+.cuerpo_articulo section,
+aside,
+.redes_sociales_autor {
+  border-top: solid 1px #FFF7ED;
+  margin-top: 15px;
+}
+
+.cuerpo_articulo section,
+aside {
+  width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #FFF7ED;
+  background-color: #080502;
+}
+
+.cuerpo_articulo section img,
+.contacto_autor,
+.redes_sociales_autor img {
+  width: 100%;
+}
+
+.cuerpo_articulo section figcaption {
+  padding-top: 5px;
+  font-size: 0.9em;
+}
+
+/*Apartado de contacto.*/
+
+
+aside {
+  text-align: center;
+}
+
+.contacto_autor img {
+  border-radius: 50%;
+  width: 15%;
+}
+
+.contacto_autor:hover {
+  img {
+  outline: 3px solid #EFB810;
+  }
+  p {
+    color:#EFB810;
+  }
+}
+
+aside h3 {
+  padding-bottom: 10px;
+}
+
+.redes_sociales_autor {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.redes_sociales_autor div {
+  display: inline-block;
+  text-align: center;
+}
+
+.redes_sociales_autor img {
+  height: 100%;
+}
+
+aside div > a {
+  font-style: italic;
+}
+
+aside div > a:hover {
+  color: #EFB810;
+}
+
+aside:hover {
+  border-color: #EFB810;
+}
+
+@media(min-width: 577px) and (max-width: 1024px) {
+
+  main {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  h2 {
+    font-size: 1.75em;
+  }
+
+  .cabecera_articulo > section {
+    font-size: 0.9em;
+  }
+
+  .cuerpo_articulo p {
+    font-size: 1em;
+  }
+
+  .cuerpo_articulo section,
+  aside {
+    background-color: transparent;
+  }
+
+  .cuerpo_articulo section img {
+    border-radius: 3px;
+  }
+
+  .contacto_autor img {
+    width: 9%;
+  }
+}
+
+@media (min-width: 1024px) {
+  
+  main {
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+
+  .cabecera_articulo {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 1.45em;
+  }
+  
+  h2 {
+    font-size: 1.85em;
+  }
+
+  .cuerpo_articulo p {
+    font-size: 0.9em;
+  }
+
+  .cuerpo_articulo section,
+  aside {
+    background-color: transparent;
+  }
+
+  .cuerpo_articulo section {
+    display: flex;
+    flex-flow: column;
+
+  }
+
+  .cuerpo_articulo section img {
+    margin: auto;
+    width: 85%;
+    max-width: 1200px;
+    border-radius: 4px;
+  }
+
+  .contacto_autor img {
+    width: 6.5%;
+  }
+
+  main {
+    .redes_sociales_autor,
+    .link_redes div,
+    .link div p {
+      display: flex;
+    }
+
+    .redes_sociales_autor,
+    .link_redes div {
+      justify-content: center;
+    }
+
+    .redes_sociales_autor {
+      flex-direction: row;
+      width: 90%;
+    }
+
+    .link_redes div,
+    .link_redes div p {
+        position: static;
+    }
+
+    .link_redes div {
+      align-items: center;
+      border: none;
+    }
+
+    .link_redes div:hover {
+      p {
+        color: #EFB810;
+      }
+    }
+
+    .link_redes img {
+      width: 10%;
+      height: auto;
+    }
+  }
+}
+
+
+
+
+

@@ -1,0 +1,166 @@
+:root {
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
+
+@font-face {
+  font-family: "Epilogue";
+  src: url(./fonts/Epilogue/Epilogue-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Epilogue";
+  color: var(--medium-gray);
+  list-style: none;
+}
+
+header {
+  padding: 10px;
+}
+
+header nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--almost-white);
+  width: 200px;
+  padding-left: 10px;
+}
+
+.nav-visible {
+  display: block;
+  z-index: 1000;
+}
+
+#btn-close {
+  text-align: right;
+  padding: 10px;
+}
+
+.sublist {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+ul li {
+  padding: 10px;
+}
+
+nav button {
+  border: none;
+  background-color: transparent;
+  margin: 0 auto;
+}
+
+nav div:last-child button {
+  display: block;
+  width: 90%;
+}
+
+nav div:last-child button:last-child {
+  border: 1px var(--medium-gray) solid;
+  border-radius: 0.5em;
+}
+
+img[alt="menu"] {
+  position: fixed;
+  right: 10px;
+}
+
+main {
+  text-align: center;
+  width: 100%;
+}
+
+section {
+  margin-top: 30px;
+}
+
+main picture img {
+  width: 100%;
+}
+
+main section h2 {
+  font-size: 40px;
+  color: var(--almost-black);
+}
+
+main section p {
+  padding: 20px;
+}
+
+main section button {
+  padding: 10px 20px;
+  background-color:  var(--almost-black);
+  color: var(--almost-white);
+  border: none;
+  border-radius: 0.5em;
+}
+
+main section button:hover {
+  background-color:  var(--almost-white);
+  color: var(--almost-black);
+  outline: 1px solid var(--almost-black);
+}
+
+main section div {
+  margin-top: 40px;
+}
+
+@media (min-width:640px) {
+
+  main picture img,
+  main section {
+    width: 40%;
+    display: inline-block;
+    position: absolute;
+  }
+
+  main section {
+    left: 20px;
+  }
+
+  #btn-menu,
+  #btn-close,
+  .sublist {
+    display: none;
+  }
+
+  header nav {
+    display: initial;
+    position: static;
+  }
+
+  header > nav > ul > li,
+  nav > ul,
+  nav > div,
+  nav > div > button,
+  .login-register button,
+  .login-register {
+    display: inline-block;
+  }
+
+  .login-register {
+    position: fixed;
+    right: 20px;
+    top: 0;
+  }
+
+  img[alt="logo"] {
+    position: relative;
+    top: 7px;
+  }
+
+  header nav ul li {
+    padding: 0 20px;
+  }
+
+
+}

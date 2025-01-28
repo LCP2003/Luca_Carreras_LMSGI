@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itineranteando - Página Principal</title>
+  <link rel="stylesheet" href="css/estilo_general.css">
+  <link rel="stylesheet" href="css/estilo_index.css">
+</head>
+<body>
+
+  <header>
+    <img class="logo_pc" src="recursos/logos/logo_grande_fondo_claro.png">
+    <img class="logo_movil" src="recursos/logos/logo_pequeno_fondo_claro.png">
+    <h1>Itineranteando</h1>
+    <nav>
+      <a class="menu_filtros">
+        <div>
+          <img class="no_hover_image" src="recursos/inputs/filtros.png">
+          <img class="hover_image" src="recursos/inputs/filtros_hover.png">
+          <p>Filtros</p>
+        </div>
+      </a>
+      <a href="">
+        <div>
+          <img class="no_hover_image" src="recursos/inputs/iniciar_sesion.png">
+          <img class="hover_image" src="recursos/inputs/iniciar_sesion_hover.png">
+          <p>Inicia sesión</p>
+        </div>
+      </a>
+    </nav>
+    <form method="get" action="" id="header_filtros">
+      <p>
+        <label for="pais">País:</label>
+        <select name="pais" id="pais">
+          <option name="Todos">Todos</option>
+          <option name="Alemania">Alemania</option>
+          <option name="España">España</option>
+          <option name="Francia">Francia</option>
+          <option name="Italia">Italia</option>
+        </select>
+      </p>
+      <p>
+        <label for="arquitectura">Arquitectura:</label>
+        <input type="checkbox" name="arquitectura" id="arquitectura" checked>
+      </p>
+      <p>
+        <label for="gastronomia">Gastronomía:</label>
+        <input type="checkbox" name="gastronomia" id="gastronomia" checked>
+      </p>
+      <p>
+        <label for="gastronomia">Historia:</label>
+        <input type="checkbox" name="historia" id="historia" checked>
+      </p>
+      <p>
+        <label for="gastronomia">Cultura:</label>
+        <input type="checkbox" name="cultura" id="cultura" checked>
+      </p>
+      <div>
+        <p class="form_botones">
+          <input type="submit" value="Buscar"></input>
+        </p>
+        <p class="form_botones">
+          <button>Cerrar</button>
+        </p>
+      </div>
+    </form>
+  </header>
+
+  <main> 
+    <h2>Artículos destacados</h2>
+    <article class="articulo_destacado">
+      <a href="views/artículos/articulo_destacado_roma2016.html">
+        <h2>Roma, la ciudad eterna</h2>
+        <img src="imagenes/imagenes_articulos/roma_2016/roma_2016_destacada.png">
+        <section>
+          <div>
+            <img class="no_hover_image" src="recursos/inputs/like.png">
+            <img class="hover_image" src="recursos/inputs/like_hover.png">
+            <img Class="clicked_image" src="recursos/inputs/like_cliked.png">
+            <p>Añadir a favoritos</p>
+          </div>
+          <div>
+            <p>Luca Carreras Pons</p>
+            <p>Julio, 2016</p>
+          </div>
+        </section>
+      </a>
+    </article>
+    <article class="articulo_destacado">
+      <a href="views/artículos/articulo_destacado_roma2016.html">
+        <h2>Salzburgo, paraíso de la nieve</h2>
+        <img src="imagenes/imagenes_articulos/salzburgo_2024/salzburgo_2024_destacada.jpg">
+        <section>
+          <div>
+            <img class="no_hover_image" src="recursos/inputs/like.png">
+            <img class="hover_image" src="recursos/inputs/like_hover.png">
+            <img Class="clicked_image" src="recursos/inputs/like_cliked.png">
+            <p>Añadir a favoritos</p>
+          </div>
+          <div>
+            <p>Luca Carreras Pons</p>
+            <p>Febrero, 2024</p>
+          </div>
+        </section>
+      </a>
+    </article>
+    <hr class="final_articulos_destacados">
+    <h2>Artículos</h2>
+    <article class="articulo_normal">
+      <a href="views/artículos/articulo_destacado_roma2016.html">
+        <h2>París, la ciudad de la luz</h2>
+        <img src="imagenes/imagenes_articulos/paris_2022/paris_2022_destacada.png">
+        <section>
+          <div>
+            <img class="no_hover_image" src="recursos/inputs/like.png">
+            <img class="hover_image" src="recursos/inputs/like_hover.png">
+            <img Class="clicked_image" src="recursos/inputs/like_cliked.png">
+            <p>Añadir a favoritos</p>
+          </div>
+          <div>
+            <p>Luca Carreras Pons</p>
+            <p>Febrero, 2022</p>
+          </div>
+        </section>
+      </a>
+    </article>
+    <article class="articulo_normal">
+      <a href="views/artículos/articulo_destacado_roma2016.html">
+        <h2>5 días en Londres</h2>
+        <img src="imagenes/imagenes_articulos/londres_2017/londres_2017_destacada.png">
+        <section>
+          <div>
+            <img class="no_hover_image" src="recursos/inputs/like.png">
+            <img class="hover_image" src="recursos/inputs/like_hover.png">
+            <img Class="clicked_image" src="recursos/inputs/like_cliked.png">
+            <p>Añadir a favoritos</p>
+          </div>
+          <div>
+            <p>Luca Carreras Pons</p>
+            <p>Londres, 2017</p>
+          </div>
+        </section>
+      </a>
+    </article>
+    <article class="articulo_normal">
+      <a href="views/artículos/articulo_destacado_roma2016.html">
+        <h2>Toledo, un viaje al medievo</h2>
+        <img src="imagenes/imagenes_articulos/toledo_2018/toledo_2018_destacada.png">
+        <section>
+          <div>
+            <img class="no_hover_image" src="recursos/inputs/like.png">
+            <img class="hover_image" src="recursos/inputs/like_hover.png">
+            <img Class="clicked_image" src="recursos/inputs/like_cliked.png">
+            <p>Añadir a favoritos</p>
+          </div>
+          <div>
+            <p>Luca Carreras Pons</p>
+            <p>Julio, 2018</p>
+          </div>
+        </section>
+      </a>
+    </article>
+    <article class="articulo_normal">
+      <a href="views/artículos/articulo_destacado_roma2016.html">
+        <h2>Málaga, cuna de la cocina</h2>
+        <img src="imagenes/imagenes_articulos/malaga_2021/malaga_2021_destacada.png">
+        <section>
+          <div>
+            <img class="no_hover_image" src="recursos/inputs/like.png">
+            <img class="hover_image" src="recursos/inputs/like_hover.png">
+            <img Class="clicked_image" src="recursos/inputs/like_cliked.png">
+            <p>Añadir a favoritos</p>
+          </div>
+          <div>
+            <p>Luca Carreras Pons</p>
+            <p>Julio, 2021</p>
+          </div>
+        </section>
+      </a>
+    </article>
+    <article class="articulo_normal">
+      <a href="views/artículos/articulo_destacado_roma2016.html">
+        <h2>Sevilla</h2>
+        <img src="imagenes/imagenes_articulos/sevilla_2019/sevilla_2019_destacada.png">
+        <section>
+          <div>
+            <img class="no_hover_image" src="recursos/inputs/like.png">
+            <img class="hover_image" src="recursos/inputs/like_hover.png">
+            <img Class="clicked_image" src="recursos/inputs/like_cliked.png">
+            <p>Añadir a favoritos</p>
+          </div>
+          <div>
+            <p>Luca Carreras Pons</p>
+            <p>Junio, 2019</p>
+          </div>
+        </section>
+      </a>
+    </article>
+    <article class="articulo_normal">
+      <a href="views/artículos/articulo_destacado_roma2016.html">
+        <h2>Madrid, la gran villa</h2>
+        <img src="imagenes/imagenes_articulos/madrid_2018/madrid_2018_destacada.png">
+        <section>
+          <div>
+            <img class="no_hover_image" src="recursos/inputs/like.png">
+            <img class="hover_image" src="recursos/inputs/like_hover.png">
+            <img Class="clicked_image" src="recursos/inputs/like_cliked.png">
+            <p>Añadir a favoritos</p>
+          </div>
+          <div>
+            <p>Luca Carreras Pons</p>
+            <p>Julio, 2018</p>
+          </div>
+        </section>
+      </a>
+    </article>
+    <article class="articulo_normal">
+      <a href="views/artículos/articulo_destacado_roma2016.html">
+        <h2>Núremberg, paseo entre murallas</h2>
+        <img src="imagenes/imagenes_articulos/nuremberg_2024/núremberg_2024_destacada.png">
+        <section>
+          <div>
+            <img class="no_hover_image" src="recursos/inputs/like.png">
+            <img class="hover_image" src="recursos/inputs/like_hover.png">
+            <img Class="clicked_image" src="recursos/inputs/like_cliked.png">
+            <p>Añadir a favoritos</p>
+          </div>
+          <div>
+            <p>Luca Carreras Pons</p>
+            <p>Febrero, 2024</p>
+          </div>
+        </section>
+      </a>
+    </article>
+    <article class="articulo_normal">
+      <a href="views/artículos/articulo_destacado_roma2016.html">
+        <h2>Múnich, corazón de Baviera</h2>
+        <img src="imagenes/imagenes_articulos/munich_2024/munich_2024_destacada.png">
+        <section>
+          <div>
+            <img class="no_hover_image" src="recursos/inputs/like.png">
+            <img class="hover_image" src="recursos/inputs/like_hover.png">
+            <img Class="clicked_image" src="recursos/inputs/like_cliked.png">
+            <p>Añadir a favoritos</p>
+          </div>
+          <div>
+            <p>Luca Carreras Pons</p>
+            <p>Febrero, 2024</p>
+          </div>
+        </section>
+      </a>
+    </article>
+  </main>
+
+  <footer>
+    <div>
+      <h4>Itineranteando</h4>
+      <p>Dirección</p>
+    </div>
+    <div class="sub_footer">
+      <div>
+        <ul>SOBRE NOSOTROS
+          <li><a href="">¿Quiénes somos?</a></li>
+          <li><a href="">Contacto</a></li>
+          <li><a href="">Política de privacidad</a></li>
+        </ul>
+      </div>
+      <div class="redes_sociales">
+        <p>REDES SOCIALES</p>
+        <a class="link_redes" href="https://www.instagram.com/?hl=es" target="_blank">
+          <div>
+            <img src="recursos/inputs/instagram.png" class="no_hover_image"/>
+            <img src="recursos/inputs/instagram_hover.png" class="hover_image"/> 
+            <p>Instagram</p>
+          </div>
+        </a>
+        <a class="link_redes" href="https://www.facebook.com/?locale=es_ES" target="_blank">
+          <div>
+            <img src="recursos/inputs/facebook.png" class="no_hover_image"/>
+            <img src="recursos/inputs/facebook_hover.png" class="hover_image"/> 
+            <p>Facebook</p>
+          </div>
+        </a>
+        <a class="link_redes" href="https://x.com/?lang=es" target="_blank">
+          <div>
+            <img src="recursos/inputs/x.png" class="no_hover_image"/>
+            <img src="recursos/inputs/x_hover.png" class="hover_image"/> 
+            <p>X</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/index.js"></script>
+
+</body>
+</html>
